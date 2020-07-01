@@ -13,10 +13,18 @@ function Pong(screenId, handleId, ballId) {
     this.screenBottom = this.screenElement.clientHeight;
     this.screenLeft = 0;
     this.screenRight = this.screenElement.clientWidth;
+
+    this.mouseY = 0;
 }
 
 Pong.prototype.init = function() {
+    document.onmousemove = this.updateMouse.bind(this);
+    
     window.requestAnimationFrame(this.gameLoop.bind(this));
+}
+
+Pong.prototype.updateMouse = function(e) {
+    this.mouseY = e.clientY;
 }
 
 Pong.prototype.resetBall = function() {
@@ -47,6 +55,9 @@ Pong.prototype.gameLoop = function() {
     if (this.ball.x <= this.screenLeft) {
         this.resetBall();
     }
+
+    // Update handle position
+    this.handle.setPosition(this.mouseY - 50);
     
     // Update ball position
     var ballX = this.ball.x + this.speedX;
