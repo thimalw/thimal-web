@@ -2,9 +2,12 @@ import Disc from './Disc';
 import Handle from './Handle';
 
 function Pong(screenId, handleId, discId) {
+    this.score = `Still going strong ${String.fromCodePoint(0x1F389)} Keep it up!`;
+    this.scoreInt = 0;
+    
     this.screenElement = document.getElementById(screenId);
     this.handle = new Handle(handleId);
-    this.disc = new Disc(discId, 0, 0);
+    this.disc = new Disc(discId, 5, 5);
 
     this.speedX = 5;
     this.speedY = 5;
@@ -40,6 +43,14 @@ Pong.prototype.updateMouse = function(e) {
     }
 }
 
+Pong.prototype.computerScored = function() {
+    this.scoreInt++;
+
+    this.score = `You've let the disc through ${this.scoreInt} times ${String.fromCodePoint(0x1F92D)}`;
+    
+    this.resetDisc();
+}
+
 Pong.prototype.resetDisc = function() {
     this.speedX = 5;
     this.speedY = Math.floor(Math.random() * (6 - -6 + 1) + -6);
@@ -48,7 +59,7 @@ Pong.prototype.resetDisc = function() {
         this.speedY = 1;
     }
 
-    this.disc.setPosition(Math.floor(this.screenBottom / 2), Math.floor(this.screenRight / 2));
+    this.disc.setPosition(Math.floor(this.screenRight / 2), Math.floor(this.screenBottom / 2));
 }
 
 Pong.prototype.gameLoop = function() {
@@ -66,7 +77,7 @@ Pong.prototype.gameLoop = function() {
     }
 
     if (this.disc.x <= this.screenLeft) {
-        this.resetDisc();
+        this.computerScored();
     }
 
     // Update handle position
