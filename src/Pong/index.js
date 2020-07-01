@@ -57,7 +57,17 @@ Pong.prototype.gameLoop = function() {
     }
 
     // Update handle position
-    this.handle.setPosition(this.mouseY - 50);
+    var handleY = this.mouseY - 50;
+
+    if (handleY < this.screenTop) {
+        handleY = 0;
+    }
+
+    if (handleY + 100 > this.screenBottom) {
+        handleY = this.screenBottom - 100;
+    }
+    
+    this.handle.setPosition(handleY);
     
     // Update ball position
     var ballX = this.ball.x + this.speedX;
