@@ -6,8 +6,8 @@ function Ball(elementId, x, y) {
 }
 
 Ball.prototype.setPosition = function(x, y) {
-    this.x = x,
-    this.y = y,
+    this.x = x;
+    this.y = y;
     
     this.element.style.top = `${y}px`;
     this.element.style.left = `${x}px`;
