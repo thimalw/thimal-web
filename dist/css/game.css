@@ -17,7 +17,7 @@
     background-color: #465059;
 }
 
-#game #ball {
+#game #disc {
     position: absolute;
     top: calc(50vh - 25px);
     left: calc(50vw - 25px);

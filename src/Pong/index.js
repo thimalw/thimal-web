@@ -1,10 +1,10 @@
-import Ball from './Ball';
+import Disc from './Disc';
 import Handle from './Handle';
 
-function Pong(screenId, handleId, ballId) {
+function Pong(screenId, handleId, discId) {
     this.screenElement = document.getElementById(screenId);
     this.handle = new Handle(handleId);
-    this.ball = new Ball(ballId, 0, 0);
+    this.disc = new Disc(discId, 0, 0);
 
     this.speedX = 5;
     this.speedY = 5;
@@ -27,7 +27,7 @@ Pong.prototype.updateMouse = function(e) {
     this.mouseY = e.clientY;
 }
 
-Pong.prototype.resetBall = function() {
+Pong.prototype.resetDisc = function() {
     this.speedX = 5;
     this.speedY = Math.floor(Math.random() * (6 - -6 + 1) + -6);
 
@@ -35,25 +35,25 @@ Pong.prototype.resetBall = function() {
         this.speedY = 1;
     }
 
-    this.ball.setPosition(this.screenBottom / 2, this.screenRight / 2);
+    this.disc.setPosition(this.screenBottom / 2, this.screenRight / 2);
 }
 
 Pong.prototype.gameLoop = function() {
     // Check bounds
-    if (this.ball.y + 50 >= this.screenBottom) {
+    if (this.disc.y + 50 >= this.screenBottom) {
         this.speedY = -Math.abs(this.speedY);
     }
     
-    if (this.ball.y <= this.screenTop) {
+    if (this.disc.y <= this.screenTop) {
         this.speedY = Math.abs(this.speedY);
     }
 
-    if (this.ball.x + 50 >= this.screenRight) {
+    if (this.disc.x + 50 >= this.screenRight) {
         this.speedX = -Math.abs(this.speedX);
     }
 
-    if (this.ball.x <= this.screenLeft) {
-        this.resetBall();
+    if (this.disc.x <= this.screenLeft) {
+        this.resetDisc();
     }
 
     // Update handle position
@@ -69,10 +69,10 @@ Pong.prototype.gameLoop = function() {
     
     this.handle.setPosition(handleY);
     
-    // Update ball position
-    var ballX = this.ball.x + this.speedX;
-    var ballY = this.ball.y + this.speedY;
-    this.ball.setPosition(ballX, ballY);
+    // Update disc position
+    var discX = this.disc.x + this.speedX;
+    var discY = this.disc.y + this.speedY;
+    this.disc.setPosition(discX, discY);
 
     window.requestAnimationFrame(this.gameLoop.bind(this));
 }
