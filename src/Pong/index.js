@@ -23,14 +23,23 @@ function Pong(screenId, handleId, discId) {
 }
 
 Pong.prototype.init = function() {
-    document.onmousemove = this.updateMouse.bind(this);
+    document.onmousemove = this.handleMouseInput.bind(this);
+    document.ontouchmove = this.handleTouchInput.bind(this);
     
     window.requestAnimationFrame(this.gameLoop.bind(this));
 }
 
-Pong.prototype.updateMouse = function(e) {
+Pong.prototype.handleMouseInput = function(e) {
+    this.updateInput(e.clientY);
+}
+
+Pong.prototype.handleTouchInput = function(e) {
+    this.updateInput(e.touches[0].clientY);
+}
+
+Pong.prototype.updateInput = function(y) {
     this.mouseYPrev = this.mouseY;
-    this.mouseY = e.clientY;
+    this.mouseY = y;
 
     this.deltaY = Math.floor((this.mouseY - this.mouseYPrev) / 2);
     
