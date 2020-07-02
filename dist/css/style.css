@@ -12,6 +12,7 @@ body {
     height: 100%;
     font-family: 'Zilla Slab', serif;
     background: #747E88;
+    /* background: #6E7D8B; */
     font-size: 20px;
 }
 
@@ -56,6 +57,7 @@ a:focus::before {
     width: 100%;
     height: 20px;
     background-color: #EE5C91;
+    background-color: #EE5C7F;
     z-index: -1;
 }
 
@@ -99,6 +101,7 @@ a:focus::before {
 
 .code-type {
     color: #FFBCF0;
+    /* color: #FFA4C5; */
 }
 
 .code-var {
