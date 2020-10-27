@@ -215,8 +215,8 @@ a:focus::before {
     display: block;
     width: calc(100% + 30px);
     border-radius: 6px;
-    transform: rotate(-6deg) translateY(-30px) translateX(0);
-    filter: saturate(0);
+    filter: saturate(1);
+    transform: rotate(-4deg) translateY(-30px) translateX(-15px) scale(1.05);
     transition: all 250ms ease;
 }
 
@@ -257,6 +257,11 @@ a:focus::before {
         background-color: #1e252c;
         color: #CDF8F8;
         transform: scale(1.05);
+    }
+
+    .portfolio__item__img {
+        transform: rotate(-6deg) translateY(-30px) translateX(0);
+        filter: saturate(0);
     }
 
     .portfolio__item:hover .portfolio__item__img {
