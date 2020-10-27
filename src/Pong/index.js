@@ -29,6 +29,11 @@ Pong.prototype.init = function() {
     window.requestAnimationFrame(this.gameLoop.bind(this));
 }
 
+Pong.prototype.resizeScreen = function() {
+    this.screenBottom = this.screenElement.clientHeight;
+    this.screenRight = this.screenElement.clientWidth;
+}
+
 Pong.prototype.handleMouseInput = function(e) {
     this.updateInput(e.clientY);
 }
