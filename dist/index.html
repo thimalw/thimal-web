@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Zilla+Slab&display=swap" rel="stylesheet">
@@ -23,19 +22,97 @@
         <div id="disc"></div>
     </div>
 
-    <div class="site-content">
-        <div class="container">
-            <header class="site-header">
-                <h1 class="site-title">Thimal Wickremage</h1>
-                <div class="site-description">I&apos;m not keeping <span class="code-type">this</span><span class="code-var">.score</span> I promise.</div>
-            </header>
+    <div class="curve">
+        <svg width="100%" height="100%" viewBox="0 0 1918 818" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+            <g transform="matrix(1,0,0,1,-2.49055,-262.481)">
+                <path d="M2.491,1080C152.254,878.764 393.096,837.596 614.946,844.094C748.609,848.01 875.413,869.247 971.407,883.386C1035.7,892.854 1086.23,899.113 1115.88,894.981C1175.31,886.699 1220.51,877.153 1260.48,849.152C1320.27,807.269 1368.43,723.924 1434.9,540.682C1489.84,389.215 1611.04,319.831 1718.48,288.278C1826.05,256.684 1919.87,262.995 1919.87,262.995C1919.91,262.999 1919.95,263 1920,263L1920,1080L2.491,1080Z" style="fill:url(#_Linear1);"/>
+            </g>
+            <defs>
+                <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.00586e-14,-817.519,817.519,5.00586e-14,1730,1080)"><stop offset="0" style="stop-color:rgb(47,56,65);stop-opacity:1"/><stop offset="0.53" style="stop-color:rgb(35,44,54);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(30,40,50);stop-opacity:1"/></linearGradient>
+            </defs>
+        </svg>
+    </div>
 
-            <ul class="site-links">
-                <li><a href="mailto:hello@thimal.me">hello@thimal.me</a></li>
-                <li><a href="https://github.com/thimalw" target="_blank">github.com/thimalw</a></li>
-                <li><a href="https://github.com/thimalw/thimal-web" target="_blank">source</a></li>
-            </ul>
-        </div>
+    <div class="site-wrap">
+        <section class="section section--landing">
+            <div class="container">
+                <header class="site-header">
+                    <h1 class="site-title">Thimal Wickremage</h1>
+                    <div class="site-description">I&apos;m not keeping <span class="code-type">this</span><span class="code-var">.score</span> I promise.</div>
+                </header>
+
+                <ul class="site-links">
+                    <li><a href="mailto:hello@thimal.dev">hello@thimal.dev</a></li>
+                    <li><a href="https://github.com/thimalw" target="_blank">github.com/thimalw</a></li>
+                    <li><a href="https://github.com/thimalw/thimal-web" target="_blank">source</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section--portfolio">
+            <div class="container">
+                <header class="section__header section__header--right">
+                    <h2 class="section__header__title">Work&sol;Experience</h2>
+                </header>
+
+                <div class="portfolio">
+                    <div class="portfolio__item">
+                        <img src="/portfolio/breakoutdesigns.png" alt="Screenshot of the Breakout Designs website" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">Breakout Designs Website</h3>
+                        <p class="portfolio__item__description">Design &amp; development of the Breakout Designs WordPress theme &amp website copy.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://next.breakoutdesigns.com.au/" target="_blank">View Website</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="/portfolio/ivint.png" alt="Screenshot of the IVolunteer International website" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">IVolunteer International Website</h3>
+                        <p class="portfolio__item__description">Design &amp; development of the IVolunteer International WordPress theme along with the associated WordPress plug-ins.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://www.ivint.org/" target="_blank">View Website</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="/portfolio/cloudcone.png" alt="Screenshot of the Cloudcone control panel" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">Lead Developer - CloudCone Control Panel</h3>
+                        <p class="portfolio__item__description">Worked with a team of developers to develop and maintain the Cloud Control Panel of CloudCone.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://app.cloudcone.com/" target="_blank">View Website</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="/portfolio/noteninja.png" alt="Screenshot of the Note Ninja app" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">NoteNinja</h3>
+                        <p class="portfolio__item__description">A personal project I did some time back to learn React. The app lets you maintain a list of notes which are fully encrypted and are only ever decrypted on the client side.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://github.com/thimalw/note-ninja/" target="_blank">Source</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="/portfolio/exploreplaces.png" alt="Screenshot of the Explore Places website" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">eXPLOREpLACES Website</h3>
+                        <p class="portfolio__item__description">Design &amp; development of the eXPLOREpLACES website. The website transcodes and stores the videos in a format suitable for HLS streaming. Also provides an admin panel to manage the videos, users, advertisements and comments.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://www.exploreplaces.net/" target="_blank">View Website</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="/portfolio/cloudcone_whmcs.png" alt="" class="portfolio__item__img">
+                        <h3 class="portfolio__item__name">CloudCone WHMCS Module</h3>
+                        <p class="portfolio__item__description">Development of the CloudCone WHMCS module. This is a plug-in for WHMCS which allows CloudCone customers to resell servers through their own WHMCS website.</p>
+                        <div class="portfolio__item__links">
+                            <a href="https://github.com/Cloudcone/cloudcone-whmcs" target="_blank">Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-text">&copy; Thimal Wickremage</div>
+            </div>
+        </footer>
     </div>
     
 <script src="js/main.js"></script>
