@@ -56,6 +56,7 @@ Pong.prototype.computerScored = function() {
     this.scoreInt++;
 
     this.score = `You've let the disc through ${this.scoreInt} times ${String.fromCodePoint(0x1F92D)}`;
+    window.score = this.score;
     
     this.resetDisc();
 }
